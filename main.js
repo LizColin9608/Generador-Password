@@ -16,6 +16,7 @@ function generar(){
         return;
     }
     
+   
     let password = '';
 
     for(let i = 0; i < numeroDigitado; i++){
@@ -53,23 +54,14 @@ if (!tieneNumero) {
 if (!tieneSimbolo) {
     alert("La contraseña debe contener al menos un símbolo especial.");
 }
+
 }
+
 
 function limpiar(){
     document.getElementById ('contrasena').value = "";
     document.getElementById ('cantidad').value = "";
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
