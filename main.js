@@ -3,7 +3,7 @@ let boton = document.getElementById('generar');
 let contrasena = document.getElementById ('contrasena');
 let btnLimpiar = document.getElementById ('limpiar');
 
-const cadenaCaracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!¡@#$%^&*()-_=+\|[]{};:/¿?,.<>';
+const cadenaCaracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
 
 
 function generar(){
@@ -30,10 +30,31 @@ function generar(){
 
     contrasena.value = password;
 
+    validar(password);
    
 }
 
+function validar(password){
 
+const tieneMayuscula = /[A-Z]/.test(password);
+const tieneMinuscula = /[a-z]/.test(password);
+const tieneNumero = /[0-9]/.test(password);
+const tieneSimbolo = /[!@#$%^&*()]/.test(password);
+
+if (!tieneMayuscula) {
+    alert("La contraseña debe contener al menos una letra mayúscula.");
+}
+if (!tieneMinuscula) {
+   alert("La contraseña debe contener al menos una letra minúscula.");
+}
+if (!tieneNumero) {
+    alert("La contraseña debe contener al menos un número.");
+}
+if (!tieneSimbolo) {
+    alert("La contraseña debe contener al menos un símbolo especial.");
+}
+
+}
 
 function limpiar(){
     document.getElementById ('contrasena').value = "";
