@@ -53,7 +53,6 @@ if (!tieneNumero) {
 if (!tieneSimbolo) {
     alert("La contraseña debe contener al menos un símbolo especial.");
 }
-
 }
 
 function limpiar(){
